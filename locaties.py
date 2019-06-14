@@ -2,7 +2,7 @@ location = {
   "congiërge" : {
     "tekst": "Hallo allemaal.",
     "keuzes": {
-      "n" : "trappenhuis", 
+      "n" : "trappenhuis1a", 
       "o" : "kluisjes",
       "w" : "aula"
       
@@ -35,74 +35,136 @@ location = {
   "scheikunde" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : ""
-      "w" : 
-      "z" : 
-      "o" : 
+      "n" : "aula", 
+      "z" : "trappenhuis3a"
+    }
+  },
+   "trappenhuis3a" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "scheikunde", 
+      "b" : "trappenhuis3b"
+    }
+  },
+   "kantine" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "aula"
+    }
+  },
+   "gymzaal" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "z" : "aula"
+    }
+  },
+   "handvaardigheid" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "kluisjes" 
+    }
+  },
+   "trappenhuis2a" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "b" : "trappenhuis2b",
+      "w" : "kluisjes"
     }
   },
    "trappenhuis1b" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
+      "b" : "trappenhuis 1c" ,
+      "w" : "aula balustrade", 
+      "z" : "informatica", 
+      "o" : "Wal", 
+      "d" : "trappenhuis1a"
     }
   },
-   "scheikunde" : { 
+   "aula balustrade" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
+      "n" : "Vlaam",
+      "w" : "biologie", 
+      "o" : "trappenhuis1b"
     }
   },
-   "scheikunde" : { 
+     "Vlaam" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
+      "n" : "lerarenkamer", 
+      "z" : "aula balustrade"
     }
   },
-   "scheikunde" : { 
+     "lerarenkamer" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
+      "z" : "Vlaam" 
     }
   },
-   "scheikunde" : { 
+     "biologie" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
+      "z" : "natuurkunde",  
+      "o" : "aula balustrade"
     }
   },
-   "scheikunde" : { 
+     "natuurkunde" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
+      "n" : "biologie", 
+      "z" : "trappenhuis3b"
     }
   },
-   "scheikunde" : { 
+       "trappenhuis3b" : { 
     "tekst": "tekst", 
     "keuzes": { 
-      "n" : 
-      "w" : 
-      "z" : 
-      "o" : 
-    }
+      "n" : "natuurkunde", 
+      "b" : "trappenhuis3c",
+      "d" : "trappenhuis3a"
+   }
+  },
+        "informatica" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "trappenhuis1b", 
+      "z" : "mediatheek"
+   }
+  },
+        "mediatheek" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "informatica", 
+   }
+  },
+        "Wal" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "aardrijkskunde",
+      "w" : "trappenhuis1b"
+   }
+  },
+        "aardrijkskunde" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "trappenhuis2b",
+      "w" : "Wal"
+   }
+  },
+         "trappenhuis2b" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "z" : "geschiedenis",
+      "w" : "aardrijkskunde",
+      "b" : "trappenhuis2c",
+      "d" : "trappenhuis2a"
+   }
+  },
+         "geschiedenis" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "trappenhuis2b"
+   }
   },
 }
 
