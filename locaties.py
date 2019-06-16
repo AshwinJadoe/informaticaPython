@@ -216,6 +216,49 @@ location = {
       "o" : "collegezaal"
    }
   },
+         "trappenhuis1d" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "duits",
+      "d" : "trappenhuis1c"
+   }
+  },
+         "duits" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "klassieke talen",
+      "w" : "trappenhuis1d"
+   }
+  },
+         "klassieke talen" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "trappenhuis2d",
+      "w" : "duits"
+   }
+  },
+         "trappenhuis2d" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "z" : "frans",
+      "w" : "klassieke talen",
+      "d" : "trappenhuis2c"
+   }
+  },
+         "frans" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "z" : "tekenen",
+      "n" : "trappenhuis2d"
+   }
+  },
+         "tekenen" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "frans", 
+      "o": "branduitgang!!!"
+   }
+  },
 }
 
 
