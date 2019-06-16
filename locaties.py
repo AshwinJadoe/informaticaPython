@@ -1,264 +1,262 @@
 location = {
-  "congiërge" : {
+  "congiërge": {
     "tekst": "Hallo allemaal.",
     "keuzes": {
-      "n" : "trappenhuis1a", 
-      "o" : "kluisjes",
-      "w" : "aula"
-      
-  }
-  },
-  "aula" : { 
-    "tekst": "Je bent nu in de aula, helaas zijn alle tafels bezet.", 
-    "keuzes": { 
-      "s" : "scheikunde", 
-      "w" : "kantine", 
-      "o" : "congiërge",
-      "n" : "gymzaal"
-    } 
-  },
-  "trappenhuis1a" : { 
-    "tekst": "Je bent nu in het eerste trappenhuis op de begane grond, wil je naar boven?", 
-    "keuzes": { 
-      "b" : "trappenhuis1b", 
-      "z" : "congiërge"
-    }
-  }, 
-  "kluisjes" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "w" : "congiërge", 
-      "z" : "kunst", 
-      "o" : "trappenhuis2a"
-    }
-  }, 
-  "scheikunde" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "aula", 
-      "z" : "trappenhuis3a"
+      "n": "trappenhuis1a",
+      "o": "kluisjes",
+      "w": "aula"
+
     }
   },
-   "trappenhuis3a" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "scheikunde", 
-      "b" : "trappenhuis3b"
+  "aula": {
+    "tekst": "Je bent nu in de aula, helaas zijn alle tafels bezet.",
+    "keuzes": {
+      "s": "scheikunde",
+      "w": "kantine",
+      "o": "congiërge",
+      "n": "gymzaal"
     }
   },
-   "kantine" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "aula"
+  "trappenhuis1a": {
+    "tekst": "Je bent nu in het eerste trappenhuis op de begane grond, wil je naar boven?",
+    "keuzes": {
+      "b": "trappenhuis1b",
+      "z": "congiërge"
     }
   },
-   "gymzaal" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "aula"
+  "kluisjes": {
+    "tekst": "tekst",
+    "keuzes": {
+      "w": "congiërge",
+      "z": "kunst",
+      "o": "trappenhuis2a"
     }
   },
-   "handvaardigheid" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "kluisjes" 
+  "scheikunde": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "aula",
+      "z": "trappenhuis3a"
     }
   },
-   "trappenhuis2a" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "b" : "trappenhuis2b",
-      "w" : "kluisjes"
+  "trappenhuis3a": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "scheikunde",
+      "b": "trappenhuis3b"
     }
   },
-   "trappenhuis1b" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "b" : "trappenhuis 1c" ,
-      "w" : "aula balustrade", 
-      "z" : "informatica", 
-      "o" : "Wal", 
-      "d" : "trappenhuis1a"
+  "kantine": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "aula"
     }
   },
-   "aula balustrade" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "Vlaam",
-      "w" : "biologie", 
-      "o" : "trappenhuis1b"
+  "gymzaal": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "aula"
     }
   },
-     "Vlaam" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "lerarenkamer", 
-      "z" : "aula balustrade"
+  "handvaardigheid": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "kluisjes"
     }
   },
-     "lerarenkamer" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "Vlaam" 
+  "trappenhuis2a": {
+    "tekst": "tekst",
+    "keuzes": {
+      "b": "trappenhuis2b",
+      "w": "kluisjes"
     }
   },
-     "biologie" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "natuurkunde",  
-      "o" : "aula balustrade"
+  "trappenhuis1b": {
+    "tekst": "tekst",
+    "keuzes": {
+      "b": "trappenhuis 1c",
+      "w": "aula balustrade",
+      "z": "informatica",
+      "o": "Wal",
+      "d": "trappenhuis1a"
     }
   },
-     "natuurkunde" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "biologie", 
-      "z" : "trappenhuis3b"
+  "aula balustrade": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "Vlaam",
+      "w": "biologie",
+      "o": "trappenhuis1b"
     }
   },
-       "trappenhuis3b" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "natuurkunde", 
-      "d" : "trappenhuis3a"
-   }
+  "Vlaam": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "lerarenkamer",
+      "z": "aula balustrade"
+    }
   },
-        "informatica" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "trappenhuis1b", 
-      "z" : "mediatheek"
-   }
+  "lerarenkamer": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "Vlaam"
+    }
   },
-        "mediatheek" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "informatica", 
-   }
+  "biologie": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "natuurkunde",
+      "o": "aula balustrade"
+    }
   },
-        "Wal" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "aardrijkskunde",
-      "w" : "trappenhuis1b"
-   }
+  "natuurkunde": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "biologie",
+      "z": "trappenhuis3b"
+    }
   },
-        "aardrijkskunde" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "trappenhuis2b",
-      "w" : "Wal"
-   }
+  "trappenhuis3b": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "natuurkunde",
+      "d": "trappenhuis3a"
+    }
   },
-         "trappenhuis2b" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "geschiedenis",
-      "w" : "aardrijkskunde",
-      "b" : "trappenhuis2c",
-      "d" : "trappenhuis2a"
-   }
+  "informatica": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "trappenhuis1b",
+      "z": "mediatheek"
+    }
   },
-         "geschiedenis" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "trappenhuis2b"
-   }
+  "mediatheek": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "informatica",
+    }
   },
-         "trappenhuis1c" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "b" : "trappenhuis1d",
-      "o" : "wiskunde"
-      "d" : "trappenhuis1b"
-   }
+  "Wal": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "aardrijkskunde",
+      "w": "trappenhuis1b"
+    }
   },
-         "wiskunde" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "w" : "trappenhuis1c",
-      "o" : "nederlands"
-   }
+  "aardrijkskunde": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "trappenhuis2b",
+      "w": "Wal"
+    }
   },
-         "nederlands" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "w" : "wiskunde",
-      "w" : "trappenhuis2c"
-   }
+  "trappenhuis2b": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "geschiedenis",
+      "w": "aardrijkskunde",
+      "b": "trappenhuis2c",
+      "d": "trappenhuis2a"
+    }
   },
-         "trappenhuis2c" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "engels",
-      "w" : "nederlands",
-      "b" : "trappenhuis2d",
-      "d" : "trappenhuis2b"
-   }
+  "geschiedenis": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "trappenhuis2b"
+    }
   },
-          "engels" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "trappenhuis2c",
-      "w" : "collegezaal"
-   }
+  "trappenhuis1c": {
+    "tekst": "tekst",
+    "keuzes": {
+      "b": "trappenhuis1d",
+      "o": "wiskunde",
+      "d": "trappenhuis1b"
+    }
   },
-           "collegezaal" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "engels",
-      "w" : "Assendorp"
-   }
+  "wiskunde": {
+    "tekst": "tekst",
+    "keuzes": {
+      "w": "trappenhuis1c",
+      "o": "nederlands"
+    }
   },
-           "Assendorp" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "collegezaal"
-   }
+  "nederlands": {
+    "tekst": "tekst",
+    "keuzes": {
+      "w": "wiskunde",
+      "w": "trappenhuis2c"
+    }
   },
-         "trappenhuis1d" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "duits",
-      "d" : "trappenhuis1c"
-   }
+  "trappenhuis2c": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "engels",
+      "w": "nederlands",
+      "b": "trappenhuis2d",
+      "d": "trappenhuis2b"
+    }
   },
-         "duits" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "klassieke talen",
-      "w" : "trappenhuis1d"
-   }
+  "engels": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "trappenhuis2c",
+      "w": "collegezaal"
+    }
   },
-         "klassieke talen" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "o" : "trappenhuis2d",
-      "w" : "duits"
-   }
+  "collegezaal": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "engels",
+      "w": "Assendorp"
+    }
   },
-         "trappenhuis2d" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "frans",
-      "w" : "klassieke talen",
-      "d" : "trappenhuis2c"
-   }
+  "Assendorp": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "collegezaal"
+    }
   },
-         "frans" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "z" : "tekenen",
-      "n" : "trappenhuis2d"
-   }
+  "trappenhuis1d": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "duits",
+      "d": "trappenhuis1c"
+    }
   },
-         "tekenen" : { 
-    "tekst": "tekst", 
-    "keuzes": { 
-      "n" : "frans", 
+  "duits": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "klassieke talen",
+      "w": "trappenhuis1d"
+    }
+  },
+  "klassieke talen": {
+    "tekst": "tekst",
+    "keuzes": {
+      "o": "trappenhuis2d",
+      "w": "duits"
+    }
+  },
+  "trappenhuis2d": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "frans",
+      "w": "klassieke talen",
+      "d": "trappenhuis2c"
+    }
+  },
+  "frans": {
+    "tekst": "tekst",
+    "keuzes": {
+      "z": "tekenen",
+      "n": "trappenhuis2d"
+    }
+  },
+  "tekenen": {
+    "tekst": "tekst",
+    "keuzes": {
+      "n": "frans",
       "o": "branduitgang!!!"
-   }
+    }
   },
 }
-
-
