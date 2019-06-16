@@ -120,7 +120,6 @@ location = {
     "tekst": "tekst", 
     "keuzes": { 
       "n" : "natuurkunde", 
-      "b" : "trappenhuis3c",
       "d" : "trappenhuis3a"
    }
   },
@@ -166,5 +165,57 @@ location = {
       "n" : "trappenhuis2b"
    }
   },
+         "trappenhuis1c" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "b" : "trappenhuis1d",
+      "o" : "wiskunde"
+      "d" : "trappenhuis1b"
+   }
+  },
+         "wiskunde" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "w" : "trappenhuis1c",
+      "o" : "nederlands"
+   }
+  },
+         "nederlands" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "w" : "wiskunde",
+      "w" : "trappenhuis2c"
+   }
+  },
+         "trappenhuis2c" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "z" : "engels",
+      "w" : "nederlands",
+      "b" : "trappenhuis2d",
+      "d" : "trappenhuis2b"
+   }
+  },
+          "engels" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "n" : "trappenhuis2c",
+      "w" : "collegezaal"
+   }
+  },
+           "collegezaal" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "engels",
+      "w" : "Assendorp"
+   }
+  },
+           "Assendorp" : { 
+    "tekst": "tekst", 
+    "keuzes": { 
+      "o" : "collegezaal"
+   }
+  },
 }
+
 
