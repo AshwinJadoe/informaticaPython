@@ -22,8 +22,6 @@ def commands(input):
   for x in commands_list:
     if x == input:
       return True
-    else:
-      return False
 
 
 
@@ -34,17 +32,15 @@ def engine (room):
   global current_room
   if roomcheck(room): 
     global oude_kamer
-    print("je mag hier niet heen, draai om")
+    print(location[room]["obstakel"]["obstakel_tekst"])
     engine(oude_kamer)
   else:  
     oude_kamer = room
     print (oude_kamer)
     print (location[room]["tekst"])
     actie = input("en nu? ").lower()
-    if commands(actie) == False:
-      print ("dit is helaas geen optie")
-      engine (room)
-    else:
+    print (commands(actie))
+    if commands(actie) == True:
       for x in (location[room]["keuzes"]):
         if actie == x:  
           if muur(x, current_room):
@@ -53,7 +49,10 @@ def engine (room):
                     
           else:   
             current_room = location[room]["keuzes"][actie]
-            engine(current_room)   
+            engine(current_room)  
+    elif commands(actie) == None:
+      print ("dit is helaas geen optie")
+      engine (room) 
 
-            
+
 engine(current_room)
