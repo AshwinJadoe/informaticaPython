@@ -12,10 +12,15 @@ current_room = "congiërge"
 oude_kamer = "congiërge"
 
 def roomcheck(room):
-  #global doorlopen 
   return location[room]["obstakel"] == "ja"
 
+def muur(x,room):
+  return (location[room]["keuzes"][x]) == "nee"
+    
+
+
 def engine (room):
+  global current_room
   if roomcheck(room): 
     global oude_kamer
     print("je mag hier niet heen, draai om")
@@ -27,11 +32,11 @@ def engine (room):
     actie = input("en nu? ").lower()
     for x in (location[room]["keuzes"]):
       if actie == x:  
-        if location[room]["keuzes"][actie] == "nee":
-          print ("je mag hier niet langs")
+        if muur(x, current_room):
+          print("Deze richting kan je niet op")
           engine(current_room)
+          
         else:   
           current_room = location[room]["keuzes"][actie]
           engine(current_room)   
-
 engine(current_room)
