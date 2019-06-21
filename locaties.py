@@ -3,27 +3,29 @@ location = {
   "congiërge": {
     "tekst": "Hallo allemaal.",
      "obstakel" : "nee",
-      "keuzes": {
-        "n": "trappenhuis1a",
-        "o": "kluisjes",
-        "w": "aula",
-        "z": "nee"
+    "keuzes": {
+      "n": "trappenhuis1a",
+      "o": "kluisjes",
+      "w": "aula",
+      "z": "nee"
 
     }
   },
 
-  "aula": {
+ """ "aula": { 
     "tekst": "Je bent nu in de aula, helaas zijn alle tafels bezet.",
-    "obstakel" : "ja",
-      "keuzes": {
-        "s": "scheikunde",
-        "w": "kantine",
-        "o": "congiërge",
-        "n": "gymzaal"
+    "obstakel" : "nee",
+    "keuzes": {
+      "s": "scheikunde",
+      "w": "kantine",
+      "o": "congiërge",
+      "n": "gymzaal"
     }
   },
+  """
   "trappenhuis1a": {
     "tekst": "Je bent nu in het eerste trappenhuis op de begane grond, wil je naar boven?",
+    "obstakel" : "nee",
     "keuzes": {
       "b": "trappenhuis1b",
       "z": "congiërge"
@@ -54,6 +56,7 @@ location = {
   },
   "kantine": {
     "tekst": "tekst",
+    "obstakel" : "ja",
     "keuzes": {
       "o": "aula"
     }
@@ -281,7 +284,7 @@ location = {
 
   "aula": {
     "tekst": "Je bent nu in de aula, helaas zijn alle tafels bezet.",
-    "obstakel" : "ja",
+    "obstakel" : "nee",
       "keuzes": {
         "s": "scheikunde",
         "w": "kantine",
