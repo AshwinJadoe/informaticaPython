@@ -13,7 +13,9 @@ current_room = "congiërge"
 oude_kamer = "congiërge"
 
 def roomcheck(room):
-  return location[room]["obstakel"] == "ja"
+   for x in location[room]:
+    if x == "obstakel":
+      return True
 
 def muur(x,room):
   return (location[room]["keuzes"][x]) == "nee"
