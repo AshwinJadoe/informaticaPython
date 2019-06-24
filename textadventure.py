@@ -15,7 +15,12 @@ oude_kamer = "congiërge"
 def roomcheck(room):
    for x in location[room]:
     if x == "obstakel":
-      return True
+      print (location[room]["obstakel"]["obstakel_tekst"])
+      for i in inventory:
+        if i == location[room]["obstakel"]["obstakel_object"]:
+          return False
+        else:
+          return True
 
 def muur(x,room):
   return (location[room]["keuzes"][x]) == "nee"
