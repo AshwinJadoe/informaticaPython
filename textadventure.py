@@ -6,25 +6,28 @@ from locaties import location
 
 #print("Welkom bij 'The Road To The Lerarenkamer'! Het is de bedoeling dat je via verschillende locaties in de school de lerarenkamer bereikt. Je begint bij de congiërge, want je bent eens weer te laat gekomen voor het eerste uurtje Assie. Bij elke locatie kan je kiezen tussen 'n', 's', 'w' en 'o' en dan zal je weer bij een nieuwe locatie komen. Ook kan je naar de volgende verdieping via 1 van de trappenhuizen.")
 
-inventory = ["zaklamp"]
+inventory = ["check", ]
 commands_list = ["n", "z", "w", "o", "b", "d"]
 
 current_room = "congiërge"
 begin_kamer = "congiërge"
-levens = 1
+levens = 2
 
 
 def roomcheck(room):
-   for x in location[room]:
-    if x == "obstakel":
+  global levens
+  if "obstakel" in location[room]:
+      print ("lukt wel")
       print (location[room]["obstakel"]["obstakel_tekst"])
-      for i in inventory:
-        if i == location[room]["obstakel"]["obstakel_object"]:
-          return False
-        else:
-          print (location[room]["obstakel"]["obstakel_niet"])
-          return True
-    else:
+      if location[room]["obstakel"]["obstakel_object"] in inventory:
+        print (location[room]["obstakel"]["obstakel_bezit"])
+        return False
+      else:
+        levens -= 1
+        print (location[room]["obstakel"]["obstakel_niet"])
+        engine (begin_kamer)
+          
+  else:
       return False
 
 
@@ -42,25 +45,33 @@ def commands(input):
 
 
 def engine (room):
-  global current_room
-  if roomcheck(room): 
-      engine (begin_kamer)
-  else:  
-    print (location[room]["tekst"])
-    actie = input("en nu? ").lower()
-    if commands(actie) == True:
-      for x in (location[room]["keuzes"]):
-        if actie == x:  
-          if muur(x, current_room):
-            print("Deze richting kan je niet op")
-            engine(current_room)
-                    
-          else:   
-            current_room = location[room]["keuzes"][actie]
-            engine(current_room)  
-    elif commands(actie) == None:
-      print ("dit is helaas geen optie")
-      engine (room) 
+  while levens > 0:
+    print (room)
+    global current_room
+    if roomcheck(room): 
+        engine (begin_kamer)
+      
+    else:  
+      print (location[room]["tekst"])
+      actie = input("en nu? ").lower()
+      if commands(actie) == True:
+        for x in (location[room]["keuzes"]):
+          if actie == x:  
+            if muur(x, current_room):
+              print("Deze richting kan je niet op")
+              engine(current_room)
+                      
+            else:   
+              current_room = location[room]["keuzes"][actie]
+              engine(current_room)  
+      elif commands(actie) == None:
+        print ("dit is helaas geen optie")
+        engine (room) 
+
+  else:
+    print ("game over")
+    quit()
+  
 
 
 engine(current_room)
