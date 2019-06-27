@@ -1,4 +1,3 @@
-
 location = {
   "congiërge": {
     "tekst": "Je bent nu bij de conciërge. Ben je nou alweer te laat gekomen?",
@@ -15,10 +14,14 @@ location = {
  "aula": { 
     "tekst": "Je bent nu in de aula, helaas zijn alle tafels bezet.",
     "obstakel" : {
-      "obstakel_tekst" : "Je moet zaklamp hebbe",
+      "obstakel_tekst" : "wollah je hebt zaklamp nodig",
       "obstakel_object" : "zaklamp",
       "obstakel_bezit" : "aight je hebt dees gewoon",
       "obstakel_niet" : "nope je hebt m niet je moet terug"
+    },
+    "object" : {
+      "object_tekst" : "er ligt een banaan",
+      "object_soort" : "banaan"
     },
     "keuzes": {
       "z": "scheikunde",
