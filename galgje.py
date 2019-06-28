@@ -56,3 +56,50 @@ def choose_word(choice):
     elif choice == 'extreem':
         word = random.choice(thirty_five_letters)
     play_game(word)
+
+def play_game(this_word):
+   
+    word = list(this_word)
+    blanks = "_" * len(word)
+    blanks = list(blanks)
+    guessed = []
+    incorrect = 6
+    while incorrect > 0:
+        print("\n" + gallows[incorrect]
+              + "\nJij hebt nog {} kansen over.".format(incorrect)
+              + "\nJouw woord: " + "".join(blanks)
+              + "\nGeraden letters: " + ", ".join(guessed)
+             )
+        letter = input("Letter: ").lower()
+        if len(letter) == 1 and letter.isalpha():
+            if letter in guessed:
+                print("\n\nWolla dat heb jij al gezegd!")
+                time.sleep(2)
+
+            elif letter in word:
+                for index,character in enumerate(word):
+                    blanks = list(blanks)
+                    if character == letter:
+                        blanks[index] = letter
+                        current = "".join(blanks)
+                        if blanks == word:
+                            print("\n\nGEFELICITEERD, JIJ HEBT GEWONNEN!!\nJouw woord was " + ''.join(word) + ".\n")
+                            y= input("Wil je nog een keer spelen??????????: [ja/nee]")
+                            if y == "ja": 
+                                  pick_difficulty() 
+                            else: print("DOEI!")
+                            
+                          
+            elif letter not in word:
+                incorrect -= 1
+                guessed.append(letter)
+        else:
+            print("\n\n!Potverjandriedubbeltjes, alleen enkele letters!\n\n")
+            time.sleep(2)
+    else:
+        print(gallows[0])
+        print("\nSorry " + player + ", GAME OVER!\nJouw woord was " + ''.join(word) + ".")
+        y= input("Wil je nog een keer spelen??????????: [ja/nee]")
+        if y == "ja": 
+            pick_difficulty() 
+        else: print("DOEI!")
