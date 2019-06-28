@@ -1,6 +1,6 @@
 location = {
   "congiërge": {
-    "tekst": "Je bent nu bij de conciërge. Ben je nou alweer te laat gekomen?",
+    "tekst": "",
     "keuzes": {
       "n": "trappenhuis1a",
       "o": "kluisjes",
@@ -60,6 +60,12 @@ location = {
   },
   "scheikunde": {
     "tekst": "Dit is nou het scheikundelokaal! PAS OP ONTPLOFFINGSGEVAAR! Ooh daar is Stapel. Stapel: 'Hallo, los deze reactievergelijking eens op'",
+    "obstakel" : {
+      "obstakel_tekst" : "Hé, jij zou verf voor mij meenemen voor het practicum. Je komt dit lokaal niet binnen totdat je verf hebt voor mij!",
+      "obstakel_object" : "verf",
+      "obstakel_bezit" : "Gelukkig heb je deze al en hoef je niet helemaal terug",
+      "obstakel_niet" : "Je moet de verf halen, want je hebt het nog niet in je inventory staan"
+    },
     "keuzes": {
       "n": "aula",
       "z": "trappenhuis3a",
@@ -149,6 +155,12 @@ location = {
   },
   "Vlaam": {
     "tekst": "Oh nee, Oh nee, daar is mevrouw Vlaam snel ren weg nu het nog kan. Anders moet je misschien nablijven.",
+    "obstakel" : {
+      "obstakel_tekst" : "Zeg jongeman, waar denk jij heen te gaan...\nDe lerarenkamer is UITERST verboden voor leerlingen!!",
+      "obstakel_object" : "betoog",
+      "obstakel_bezit" : "Oh ik zie dat je een betoog  hebt \nDie wil je zeker even in een postvakje van je docent leggen..\nIn dat geval loop maar even door.",
+      "obstakel_niet" : "IEDERE LEERLING WEET DAT JE HIER NIET MAG KOMEN \nMELDEN\nNU!!!!"
+    },
     "keuzes": {
       "n": "lerarenkamer",
       "z": "aula balustrade",
@@ -159,7 +171,6 @@ location = {
     }
   },
   "lerarenkamer": {
-    "tekst": "Ja, ja. Hier is het dan, de lerarenkamer!!!!",
     "keuzes": {
       "z": "Vlaam",
       "o": "nee",
@@ -368,6 +379,12 @@ location = {
   },
   "klassieke talen": {
     "tekst": "Zit jij op het gymnasium? Spreek jij toevallig Griek en Latijns? HET ANTWOORD IS NEE, JE LEERT NIET OM TE SPREKEN HET IS EEN DODE TAAL!!!!",
+    "obstakel" : {
+      "obstakel_tekst" : "Je kan je huiswerk niet maken zonder een woordenboek. Ga maar even een woordenboek halen",
+      "obstakel_object" : "woordenboek",
+      "obstakel_bezit" : "aight je hebt dees gewoon",
+      "obstakel_niet" : "nope je hebt m niet je moet terug"
+    },
     "keuzes": {
       "o": "trappenhuis2d",
       "w": "duits",
