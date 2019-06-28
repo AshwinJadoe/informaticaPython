@@ -4,24 +4,33 @@ from locaties import location
 instructies = "Bewegen door het gebouw doe je met \"n\", \"o\", \"z\", of \"w\" \nAls je bij een trappenhuis aankomt kan je met \"b\" naar boven of met \"d\" naar beneden \nVerder kan je iets(als je iets tegenkomt) in je rugzak doen met \"g\" \nDe inhoud van je rugtas bekijk je met \"i\" \nAls je het spel wilt verlaten toets je \"q\" in \nEn tenslotte, als je de instructies nog een keer wilt horen druk op \"h\" " 
 
 def begin():
-  print ("Congiërge: Goedendag, ik ben Youseff de congiërge hier op het St-Maartenscollege.")
+  global naam
+  print ("Congiërge: Goedendag, ik ben Yousef de congiërge hier op het St-Maartenscollege.")
+  time.sleep(1)
   naam = input("En jij bent?  ")
+  time.sleep(1.5)
   print ("Hartelijk welkom %s, welkom op het Sint-Maartenscollege " % naam)
+  time.sleep(1)
   print ("Ik zal je even snel uitleggen hoe het hier op school werkt! ")
+  time.sleep(1)
   print (instructies)
+  time.sleep(1)
   print ("Oh en nog 1 laatste regel: \nDe lerarenkamer is voor leerlingen STRICT verboden en zal met een schorsing bestraft worden!")
+  time.sleep(1)
   print ("Ik ga dr gauw weer vandoor, want ik hoor al weer een paar relschoppende bruggers. \nLater", naam)
+  time.sleep(1)
   print (".\n.\n.\n.")
-  print ("Hey!\n{0} heette je toch?\nNou beste {1} je moet iets voor me doen! \nZou jij deze brief af voor mij af willen leveren in de lerarenkamer? \nIk stop m alvast in je tas \nHeel erg bedankt goos! \nSucces!!!".format(naam, naam))
+  time.sleep(1)
+  print ("Hey!\n{0} heette je toch?\nNou beste {1} je moet iets voor me doen! \nWij van het leerlingenverzet zijn jaren geleden geschorst van deze school \nAlleen moet ik iets hier iets afleveren\nZou jij dat voor mij willen doen alsjeblief? \nJe hoeft alleen maar deze brief af te leveren in de lerarenkamer, in het postvakje van meneer Logtenberg om precies te zijn \nIk stop m alvast in je tas \nHeel erg bedankt goos! \nSucces!!!".format(naam, naam))
+  
 
-
-begin()
-inventory = ["check", "zaklamp"]
+#begin()
+inventory = ["betoog"]
 commands_list = ["n", "z", "w", "o", "b", "d", "i", "q", "h"]
 
 current_room = "congiërge"
-begin_kamer = "congiërge"
-levens = 2
+begin_kamer = "Vlaam"
+levens = 0
 
 
 def roomcheck(room):
@@ -32,9 +41,9 @@ def roomcheck(room):
         print (location[room]["obstakel"]["obstakel_bezit"])
         return False
       else:
-        levens -= 1
+        levens += 1
         print (location[room]["obstakel"]["obstakel_niet"])
-        engine (begin_kamer)
+        briefjehalen (levens)
           
   else:
       return False
@@ -80,18 +89,25 @@ def andere_commands (input):
     return False
   
 
+def victory(naam):
+  print("Je bent aangekomen bij de befaamde lerarenkamer, een plek waar alleen de elite mag komen! \nElsakkers: Goedendag {0} heette je toch? Beste {1} ik heb goede dingen over jou gehoord\nKan ik iets voor je doen? \nHet vakje van meneer Logtenberg zei je? \nUiteraard, komt voor de bakker!".format(naam, naam))
+  print("game over")
+  quit()
 
-
-    
+def briefjehalen(levens):
+  print("\nYousef: Tjongejonge ben je daar nu al weer?\nHier heb je nog een briefje, dat wordt morgen 8uur melden\nJe hebt nu %s briefje(s), bij 10 word je geschorst! onthoud dat goed!" % levens)  
+  engine(begin_kamer)  
 
 
 def engine (room):
-  while levens > 0:
+  global naam
+  while levens < 10:
     print ("")
-    print (room)
     global current_room
     if roomcheck(room): 
         engine (begin_kamer)
+    elif room == "lerarenkamer":
+      victory(naam)
       
     else:  
       if object_check(room):
@@ -124,4 +140,4 @@ def engine (room):
   
 
 
-engine(current_room)
+engine(begin_kamer)
