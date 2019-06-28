@@ -103,7 +103,9 @@ def play_game(this_word):
         if y == "ja": 
             pick_difficulty() 
         else: print("DOEI!")
- name= input("Hallo, je bent bij Nederlands. Wat is jouw naam: ")
+                     
+                     
+name= input("Hallo, je bent bij Nederlands. Wat is jouw naam: ")
 time.sleep(1)
 print("Welkom,", name)
 time.sleep(1.4)
@@ -114,6 +116,6 @@ x= input("Heb jij zin om een spelletje te spelen, %s: [ja/nee]" %name)
 if x == "ja": 
   print("Oké, laten we beginnen met galgje, als je wint krijg je een object voor je inventory!") 
   difficulty = pick_diff()
-elif x == "nee": print("Ga dan maar weg, maar als je van gedachten verandert kan je altijd terug komen!") 
+elif x == "nee": print("Dan heb je pech, we gaaan toch een spelletje spelen!") 
 else: print("Je kan ja of nee invullen en niks anders.ZO MOEILIJK IS DAT TOCH NIET! ")
   
