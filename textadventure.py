@@ -24,12 +24,125 @@ def begin():
   print ("Hey!\n{0} heette je toch?\nNou beste {1} je moet iets voor me doen! \nWij van het leerlingenverzet zijn jaren geleden geschorst van deze school \nAlleen moet ik iets hier iets afleveren\nZou jij dat voor mij willen doen alsjeblief? \nJe hoeft alleen maar deze brief af te leveren in de lerarenkamer, in het postvakje van meneer Logtenberg om precies te zijn \nIk stop m alvast in je tas \nHeel erg bedankt goos! \nSucces!!!".format(naam, naam))
   
 
-#begin()
+def spel():
+  #Gallow printouts
+  gallows = ["_______\n|     |\n|     O\n|    -|-\n|     |\n|    / \\ \n|\n=======",
+        "_______\n|     |\n|     O\n|    -|-\n|     |\n|    /\n|\n=======",
+        "_______\n|     |\n|     O\n|    -|-\n|     |\n|\n|\n=======",
+        "_______\n|     |\n|     O\n|    -|\n|     |\n|\n|\n=======",
+        "_______\n|     |\n|     O\n|     |\n|     |\n|\n|\n=======",
+        "_______\n|     |\n|     O\n|\n|\n|\n|\n=======",
+        "_______\n|     |\n|\n|\n|\n|\n|\n=======",
+        ]
+
+  # Lists containing the words for the game
+  four_letters = ['boom', 'deel', 'ding', 'ring', 'snel', 'ruim', 'duim', 'geel', 'eend']
+
+  ten_letters = ['afbakbrood', 'agorafobie', 'autodeuren', 'barricades', 'paaseieren', 'xylofonist']
+
+  twenty_five_letters = ['arbeidsongeschiktheidswet', 'teambuildingsactiviteiten', 'uraniumverrijkingsfabriek', 'vierentwintiguurseconomie', 'aaaaaaaaaaaaaaaaaaaaaaaaa']
+
+  thirty_five_letters= [
+  'hippopotomonstrosesquippedaliofobie', 'landbouwmechanisatietentoonstelling', 'hottentottententententoonstellingen', 'ultravioletstralingsabsorptiefilter'
+  ]
+
+
+  #Program Functions
+  def pick_diff():
+      
+      prompt = "Kies een moeilijkheidsgraad!. (Makkelijk, Medium, Moeilijk, Extreem)\n>"
+      choice = ""
+      while choice not in ['makkelijk', 'medium', 'moeilijk', 'extreem']:
+          choice = input(prompt)
+          choice = choice.lower()
+      change_diff(choice)
+
+  def change_diff(level):
+      
+      message = "\nJij hebt deze moeilijkheidsgraad gekozen: " + level + ". Wil je het veranderen? [J/N]\n>"
+      answer = ""
+      while answer not in ['j', 'n']:
+          answer = input(message)
+          answer = answer.lower()
+      if answer == 'j':
+          pick_diff()
+      if answer == 'n':
+          print("\nSucces!\n")
+          choose_word(level)
+
+  def choose_word(choice):
+      
+      if choice == 'makkelijk':
+          word = random.choice(four_letters)
+      elif choice == 'medium':
+          word = random.choice(ten_letters)
+      elif choice == 'moeilijk':
+          word = random.choice(twenty_five_letters)
+      elif choice == 'extreem':
+          word = random.choice(thirty_five_letters)
+      play_game(word)
+
+  def play_game(this_word):
+      print (this_word)
+      word = list(this_word)
+      blanks = "_" * len(word)
+      blanks = list(blanks)
+      guessed = []
+      incorrect = 6
+      while incorrect > 0:
+          print("\n" + gallows[incorrect]
+                + "\nJij hebt nog {} kansen over.".format(incorrect)
+                + "\nJouw woord: " + "".join(blanks)
+                + "\nGeraden letters: " + ", ".join(guessed)
+              )
+          letter = input("Letter: ").lower()
+          if len(letter) == 1 and letter.isalpha():
+              if letter in guessed:
+                  print("\n\nWolla dat heb jij al gezegd!")
+                  time.sleep(2)
+
+              elif letter in word:
+                  for index,character in enumerate(word):
+                      blanks = list(blanks)
+                      if character == letter:
+                          blanks[index] = letter
+                          current = "".join(blanks)
+                          if blanks == word:
+                              print("\n\nGEFELICITEERD, JIJ HEBT GEWONNEN!!\nJouw woord was " + ''.join(word) + ".\n")
+                              del location["nederlands"]["spel"]
+                              engine("nederlands")
+
+
+                            
+              elif letter not in word:
+                  incorrect -= 1
+                  guessed.append(letter)
+          else:
+              print("\n\n!Potverjandriedubbeltjes, alleen enkele letters!\n\n")
+              time.sleep(2)
+      else:
+          print(gallows[0])
+          print("\nSorry , GAME OVER!\nJouw woord was " + ''.join(word) + ".")
+          briefjehalen()          
+
+  x= input("Heb je zin om een spelletje te spelen? \nje kan een prijs winnen die je later misschien nog nodig hebt *knipoog*\nMaar let op, als je niet wint, moet je een briefje halen. ")
+  if x == "ja": 
+    print("Oké, laten we beginnen met galgje, als je wint krijg je een object voor je inventory!") 
+    pick_diff()
+  elif x == "nee": 
+    print("Dan heb je pech, want we gaan gewoon lekker een spelletje spelen!") 
+    pick_diff()
+  else:
+    print("Je kan ja of nee invullen en niks anders.ZO MOEILIJK IS DAT TOCH NIET! Nu mag je niet meer kiezen, we gaan lekker een spelletje spelen. ")
+    pick_diff
+
+
+
 inventory = ["betoog"]
 commands_list = ["n", "z", "w", "o", "b", "d", "i", "q", "h"]
 
 current_room = "congiërge"
-begin_kamer = "Vlaam"
+begin_kamer = "nederlands"
 levens = 0
 
 
@@ -106,8 +219,12 @@ def engine (room):
     global current_room
     if roomcheck(room): 
         engine (begin_kamer)
-    elif room == "lerarenkamer":
+    elif spel in  location[room]:
       victory(naam)
+    elif "spel" in location[room]:
+      spel()
+     
+
       
     else:  
       if object_check(room):
