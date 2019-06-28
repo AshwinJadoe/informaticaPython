@@ -304,6 +304,7 @@ location = {
   },
   "nederlands": {
     "tekst": "Wollla doet jij goeder Nederaldns sprieken als ik?",
+    "spel" : "ja", 
     "keuzes": {
       "w": "wiskunde",
       "o": "trappenhuis2c",
