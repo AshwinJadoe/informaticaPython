@@ -248,7 +248,7 @@ location = {
     }
   },
   "aardrijkskunde": {
-    "tekst": "Dit is AK",
+    "tekst": "Dit is AK. Ook al hebben we tegenwoordig Google Maps, is het nog steeds handig om AK te kiezen",
     "keuzes": {
       "o": "trappenhuis2b",
       "w": "Wal",
@@ -303,7 +303,7 @@ location = {
     }
   },
   "nederlands": {
-    "tekst": "Wollla doet jij goeder Nederaldns sprieken als ik?",
+    "tekst": "Je bent bij Nederlands. Hier kunnen wij jou alles leren over grammatica, spelling en literatuur. Maar eerst een belangrijke vraag: ",
     "spel" : "ja", 
     "keuzes": {
       "w": "wiskunde",
@@ -324,7 +324,7 @@ location = {
     }
   },
   "engels": {
-    "tekst": "You Spiek verie goet Inglish",
+    "tekst": "You are now at English .",
     "keuzes": {
       "n": "trappenhuis2c",
       "w": "collegezaal",
@@ -368,7 +368,7 @@ location = {
     }
   },
   "duits": {
-    "tekst": "Guten Tag",
+    "tekst": "Guten Tag! Dit is Duits, een zeer mooie taal.",
     "keuzes": {
       "o": "klassieke talen",
       "n": "nee",
@@ -379,12 +379,12 @@ location = {
     }
   },
   "klassieke talen": {
-    "tekst": "Zit jij op het gymnasium? Spreek jij toevallig Griek en Latijns? HET ANTWOORD IS NEE, JE LEERT NIET OM TE SPREKEN HET IS EEN DODE TAAL!!!!",
+    "tekst": "Zit jij op het gymnasium? Spreek jij toevallig Griek en Latijns? TEN EERSTE IS HET GRIEKS EN LATIJN EN TEN TWEEDE WE LEREN NIET OM TE PRATEN HET IS EEN DODE TAAL!!!!",
     "obstakel" : {
       "obstakel_tekst" : "Je kan je huiswerk niet maken zonder een woordenboek. Ga maar even een woordenboek halen",
       "obstakel_object" : "woordenboek",
-      "obstakel_bezit" : "aight je hebt dees gewoon",
-      "obstakel_niet" : "nope je hebt m niet je moet terug"
+      "obstakel_bezit" : "Je bent echt goed in dit spel, want je hebt het woordenboek. Chapeau",
+      "obstakel_niet" : "Als je het woordenboek had gehad was je nu binnen, maar helaas je moet terug en het woordenboek vinden."
     },
     "keuzes": {
       "o": "trappenhuis2d",
@@ -416,7 +416,7 @@ location = {
     }
   },
   "tekenen": {
-    "tekst": "Je kan dit vergeten, tekenen is toch een nutteloos vak",
+    "tekst": "Dit is tekenen, een lokaal vol verf en mooie kunstwerken van bruggers.",
     "keuzes": {
       "n": "frans",
       "o": "nee",
