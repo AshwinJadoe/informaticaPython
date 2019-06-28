@@ -112,5 +112,6 @@ x= input("Heb jij zin om een spelletje te spelen, %s: [ja/nee]" %name)
 if x == "ja": 
   print("Oké, laten we beginnen met galgje, als je wint krijg je een object voor je inventory!") 
   difficulty = pick_diff()
-elif x == "nee": print("Ga dan maar weg, maar als je van gedachten verandert kan je altijd terug komen!") 
-else: print("Je kan ja of nee invullen en niks anders.ZO MOEILIJK IS DAT TOCH NIET! ")
+elif x == "nee": print("Dan heb je pech, want we gaan gewoon lekker een spelletje spelen!") 
+else: print("Je kan ja of nee invullen en niks anders.ZO MOEILIJK IS DAT TOCH NIET! Nu mag je niet meer kiezen, we gaan lekker een spelletje spelen. ")
+print("Maar let op, als je niet wint, moet je een briefje halen")
