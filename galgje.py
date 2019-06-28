@@ -23,6 +23,8 @@ thirty_five_letters= [
  'hippopotomonstrosesquippedaliofobie', 'landbouwmechanisatietentoonstelling', 'hottentottententententoonstellingen', 'ultravioletstralingsabsorptiefilter'
 ]
 
+
+#Program Functions
 def pick_diff():
     
     prompt = "Kies een moeilijkheidsgraad!. (Makkelijk, Medium, Moeilijk, Extreem)\n>"
@@ -84,10 +86,7 @@ def play_game(this_word):
                         current = "".join(blanks)
                         if blanks == word:
                             print("\n\nGEFELICITEERD, JIJ HEBT GEWONNEN!!\nJouw woord was " + ''.join(word) + ".\n")
-                            y= input("Wil je nog een keer spelen??????????: [ja/nee]")
-                            if y == "ja": 
-                                  pick_difficulty() 
-                            else: print("DOEI!")
+                           
                             
                           
             elif letter not in word:
@@ -99,12 +98,9 @@ def play_game(this_word):
     else:
         print(gallows[0])
         print("\nSorry " + player + ", GAME OVER!\nJouw woord was " + ''.join(word) + ".")
-        y= input("Wil je nog een keer spelen??????????: [ja/nee]")
-        if y == "ja": 
-            pick_difficulty() 
-        else: print("DOEI!")
-                     
-                     
+        
+        
+
 name= input("Hallo, je bent bij Nederlands. Wat is jouw naam: ")
 time.sleep(1)
 print("Welkom,", name)
@@ -116,6 +112,5 @@ x= input("Heb jij zin om een spelletje te spelen, %s: [ja/nee]" %name)
 if x == "ja": 
   print("Oké, laten we beginnen met galgje, als je wint krijg je een object voor je inventory!") 
   difficulty = pick_diff()
-elif x == "nee": print("Dan heb je pech, we gaaan toch een spelletje spelen!") 
+elif x == "nee": print("Ga dan maar weg, maar als je van gedachten verandert kan je altijd terug komen!") 
 else: print("Je kan ja of nee invullen en niks anders.ZO MOEILIJK IS DAT TOCH NIET! ")
-  
